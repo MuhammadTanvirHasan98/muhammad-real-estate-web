@@ -1,7 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import { HiHomeModern } from "react-icons/hi2";
+import { UseAuthContext } from "../../FirebaseProvider/FirebaseProvider";
+
 
 const Navbar = () => {
+  const { user, logOut } = UseAuthContext();
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("Logged out successfully!");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+  console.log(user?.photoURL)
+
   const navLinks = (
     <div className="flex flex-col lg:flex-row gap-2 ">
       <li>
@@ -24,9 +39,9 @@ const Navbar = () => {
               ? "btn font-bold border-2 border-orange-600 text-orange-600"
               : "font-bold btn"
           }
-          to="/listedBooks"
+          to="/contact"
         >
-          Listed Books
+          Contact Us
         </NavLink>
       </li>
 
@@ -37,37 +52,28 @@ const Navbar = () => {
               ? "btn font-bold border-2 border-orange-600 text-orange-600"
               : "font-bold btn"
           }
-          to="/pagesToRead"
+          to="/userProfile"
         >
-          Pages to Read
+          User Profile
         </NavLink>
       </li>
 
+    {
+      user && 
       <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "btn font-bold border-2 border-orange-600 text-orange-600"
-              : "font-bold btn"
-          }
-          to="/reviews"
-        >
-          Reviews
-        </NavLink>
-      </li>
-
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "btn font-bold border-2 border-orange-600 text-orange-600"
-              : "font-bold btn"
-          }
-          to="/upcomingBooks"
-        >
-          Upcoming
-        </NavLink>
-      </li>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "btn font-bold border-2 border-orange-600 text-orange-600"
+            : "font-bold btn"
+        }
+        to="/updateProfile"
+      >
+        Update Profile
+      </NavLink>
+    </li>
+    }
+     
     </div>
   );
 
@@ -103,15 +109,6 @@ const Navbar = () => {
             >
               {/* Navbar when md screen */}
               {navLinks}
-
-              <li>
-                {" "}
-                <a className="btn bg-sky-400 font-bold text-white">Sign In</a>
-              </li>
-              <li>
-                {" "}
-                <a className="btn bg-green-400 font-bold text-white">Sign Up</a>
-              </li>
             </ul>
           </div>
           <Link to="/">
@@ -133,23 +130,46 @@ const Navbar = () => {
           <ul className=" flex gap-2">{navLinks}</ul>
         </div>
 
-  
-       {/* Profile image */}
-       
-       <img
-            className="w-[35px] mr-2 lg:hidden h-[35px] border-2 border-blue-700 p-[1px] rounded-full"
-            src="https://i.ibb.co/ZNn9nhy/quran-and-modern-science.png"
-            alt=""
-          />
-         
-      {/* Login button */}
-        <div className="navbar-end hidden lg:flex gap-2">
-          <button className="btn mr-2 bg-sky-400 font-bold text-white">Login</button>
-        </div>
+        {user ? (
+          <div className="flex justify-end w-[30%]">
+           
 
+            <div className="dropdown dropdown-hover">
+              <div tabIndex={0} role="button" className="m-1">
+              <img
+              className="w-[35px] mr-2  h-[35px] border-2 border-blue-700 p-[1px] rounded-full"
+              src={user?.photoURL!==null ?  user?.photoURL :"https://i.ibb.co/NThmbzT/Userprofile.png" }
+              alt="logo"
+              
+            />
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 right-0"
+              >
+                <p className="text-center">{user?.displayName ? user?.displayName :"User Name"}</p>
+                <Link className="flex mt-2 justify-center" to="/login">
+              <button
+                onClick={handleLogOut}
+                className="btn btn-sm mr-2 bg-sky-400 font-bold text-white"
+              >
+                Log out
+              </button>
+            </Link>
+              </ul>
+            </div>
 
-        
-      
+            
+          </div>
+        ) : (
+          <div className="navbar-end lg:flex gap-2">
+            <Link to="/login">
+              <button className="btn mr-2 bg-sky-400 font-bold text-white">
+                Login
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

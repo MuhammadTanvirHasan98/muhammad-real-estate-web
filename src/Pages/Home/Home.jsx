@@ -3,6 +3,8 @@ import 'animate.css';
 
 
 const Home = () => {
+
+
   const authInfo = UseAuthContext();
   console.log(authInfo);
   return (
