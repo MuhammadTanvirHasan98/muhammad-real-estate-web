@@ -13,36 +13,42 @@ export const UseAuthContext =()=>{
 const FirebaseProvider = ({children}) => {
 
   const[user, setUser] = useState([]);
-
+  const[loading, setLoading] = useState(true);
+  console.log(loading);
   const googleProvider = new GoogleAuthProvider();
 
 
   //create user
   const createUser = (email,password)=>{
+       setLoading(true);
       return createUserWithEmailAndPassword(auth, email, password);
   }
 
 
   //update user
   const updateUserProfile =(name, photo)=>{
+      setLoading(true);
      return updateProfile(auth.currentUser, {
       displayName: name, 
       photoURL: photo
     });
   }
 
-  //sign in user
+  //sign in
   const loginUser =(email,password)=>{
+      setLoading(true);
      return signInWithEmailAndPassword(auth, email, password);
   }
 
   //google login
   const loginWithGoogle =()=>{
+     setLoading(true);
      return signInWithPopup(auth, googleProvider);
   }
 
 
   const logOut=()=>{
+     setLoading(true);
      return signOut(auth);
   }
 
@@ -52,11 +58,15 @@ const FirebaseProvider = ({children}) => {
          if(currentUser){
           console.log("this user is observing by onAuthChangeState:", currentUser)
           setUser(currentUser);
+          setLoading(false);
           console.log("Current user logged in!")
+          
          }
          else{
            setUser(null);
            console.log("Current user logged out!")
+           setLoading(false);
+         console.log(user);
          }
       })
 
@@ -74,7 +84,9 @@ const FirebaseProvider = ({children}) => {
      loginUser,
      loginWithGoogle,
      logOut,
-     updateUserProfile
+     updateUserProfile,
+     loading,
+     setLoading
   };
 
 

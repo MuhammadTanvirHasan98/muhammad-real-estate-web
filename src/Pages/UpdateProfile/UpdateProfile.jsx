@@ -1,9 +1,13 @@
 import { UseAuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useState } from "react";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateProfile = () => {
-  const { user, updateUserProfile } = UseAuthContext();
+  const { user,setLoading, updateUserProfile } = UseAuthContext();
   const [edit, setEdit] = useState(false);
+
+  const tost =()=> toast.success("Wow so easy !",{position: "top-center"})
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -12,21 +16,25 @@ const UpdateProfile = () => {
     const name = form.get("name");
     const photo = form.get("photo");
     console.log(name, photo);
-    setEdit(false); // Disable edit mode after update
+    // Disable edit mode after update
 
     //Another way
     // const name = e.target.name.value;
     // const photo = e.target.photo.value;
     // console.log(name,photo)
-
     // Logic to update user profile
+   
+    
     updateUserProfile(name, photo).then(() => {
       console.log("User Updated Successfully!");
+      setLoading(false);
+      // toast.success("Wow so easy !",{position: "top-center"})
     });
+    
   };
 
   const handleEdit = () => {
-    setEdit(true); // Enable edit mode
+    setEdit(!edit); // Enable edit mode
   };
 
   return (
@@ -93,7 +101,7 @@ const UpdateProfile = () => {
               <button
                 onClick={handleEdit}
                 className="btn btn-sm md:btn-md lg:btn-md btn-primary"
-                disabled={edit} // Disable edit button when in edit mode
+                 // Disable edit button when in edit mode
               >
                 Edit
               </button>
@@ -107,8 +115,10 @@ const UpdateProfile = () => {
               </button>
             </div>
           </form>
+          <button className="btn btn-outline" onClick={tost}>Toast</button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

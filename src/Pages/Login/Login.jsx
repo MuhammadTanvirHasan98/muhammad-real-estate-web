@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { UseAuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { FcGoogle } from "react-icons/fc";
 import { SiFacebook } from "react-icons/si";
+// import { ToastContainer, toast } from 'react-toastify';
+
 
 const Login = () => {
   // const {name, age} = UseAuthContext();
@@ -36,6 +38,7 @@ const Login = () => {
         // console.log(user);
         setSuccess("User logged in successfully.");
         console.log("Logged in successfully!");
+        // toast.success(success);
         e.target.reset();
         // navigate("/profile");
         // ...
@@ -43,6 +46,7 @@ const Login = () => {
       .catch((error) => {
         console.error(error.message);
         setErrorMsg(error.message);
+        // toast.warn(errorMsg);
       });
   };
 
@@ -52,11 +56,14 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log("This user is from google", user);
+        setSuccess("User logged in successfully.");
+        // toast.success(success);
         // navigate("/profile");
       })
       .catch((error) => {
         console.error(error.message);
         setErrorMsg(error.message);
+        // toast.warn(errorMsg);
       });
   };
 
@@ -70,6 +77,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error.message);
+        // toast("Wow so easy!")
         setErrorMsg(error.message);
       });
   };
@@ -167,6 +175,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      {/* <ToastContainer /> */}
     </div>
   );
 };
