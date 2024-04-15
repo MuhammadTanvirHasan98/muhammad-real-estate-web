@@ -8,7 +8,7 @@ const Slider = () => {
   return (
     <div>
 
-      <div className="mt-32 md:mt-8">
+      <div className="mt-32 md:mt-0">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -37,7 +37,7 @@ const Slider = () => {
                     <h1 className="md:text-5xl text-3xl  font-bold animate__animated  animate__fadeInUp animate__slow">
                       Luxury <br /> Residence Here
                     </h1>
-                    <p className="md:my-4 my-2 md:text-xl animate__animated animate__rotateInUpRight animate__slow">
+                    <p className="md:my-4 my-2 md:text-xl animate__animated animate__rotateInUpRight animate__slow md:w-full md:mx-0 w-[90%] mx-auto">
                       Whether you are looking to buy or rent a home, we really
                       are the people for you to come to.
                     </p>
@@ -70,7 +70,7 @@ const Slider = () => {
                     <h1 className="md:text-5xl text-3xl  font-bold animate__animated  animate__fadeInUp animate__slow">
                       Luxury <br /> Residence Here
                     </h1>
-                    <p className="md:my-4 my-2 md:text-xl animate__animated animate__rotateInUpRight animate__slow">
+                    <p className="md:my-4 my-2 md:text-xl animate__animated animate__rotateInUpRight animate__slow md:w-full md:mx-0 w-[90%] mx-auto">
                       Whether you are looking to buy or rent a home, we really
                       are the people for you to come to.
                     </p>
@@ -103,7 +103,7 @@ const Slider = () => {
                     <h1 className="md:text-5xl text-3xl  font-bold animate__animated  animate__fadeInUp animate__slow">
                       Luxury <br /> Residence Here
                     </h1>
-                    <p className="md:my-4 my-2 md:text-xl animate__animated animate__rotateInUpRight animate__slow">
+                    <p className="md:my-4 my-2 md:text-xl animate__animated animate__rotateInUpRight animate__slow md:w-full md:mx-0 w-[90%] mx-auto">
                       Whether you are looking to buy or rent a home, we really
                       are the people for you to come to.
                     </p>

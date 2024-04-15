@@ -137,7 +137,7 @@ const Navbar = () => {
             <div className="dropdown dropdown-hover">
               <div tabIndex={0} role="button" className="m-1">
               <img
-              className="w-[35px] mr-2  h-[35px] border-2 border-blue-700 p-[1px] rounded-full"
+              className="w-[40px] mr-2  h-[40px] border-2 border-blue-700 p-[1px] rounded-full"
               src={user?.photoURL!==null ?  user?.photoURL :"https://i.ibb.co/NThmbzT/Userprofile.png" }
               alt="logo"
               
