@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/Jmx6bdG/single-house.jpg",
+    "estate_title": "Cozy Family Home",
+    "segment_name": "Single family homes",
+    "short_des": "3 bed, 2 bath single-family home with spacious living area.It will be ideal for family comfort house.",
+    "description": "Nestled in a tranquil neighborhood, this charming single-family home offers an idyllic retreat for families seeking comfort and convenience. Boasting three bedrooms and two bathrooms, the residence features a spacious living area, perfect for relaxing or entertaining guests. The well-equipped kitchen provides ample space for culinary endeavors, while the adjacent dining area offers a cozy atmosphere for family meals. Outside, a private backyard garden invites outdoor enjoyment and relaxation. The master suite boasts a luxurious en-suite bathroom and ample closet space, providing a peaceful sanctuary for rest and relaxation. Two additional bedrooms offer versatility for family members or guests. Throughout the home, large windows bathe the interiors in natural light, creating a warm and inviting ambiance. Conveniently located near schools, parks, and amenities, this home offers the ideal blend of suburban tranquility and urban convenience. With easy access to major thoroughfares, commuting to work or exploring the city is effortless. Whether you are enjoying a quiet evening at home or hosting gatherings with friends and family, this cozy family home provides the perfect backdrop for cherished memories and everyday moments of joy.",
+    "price": "$1,000,555",
+    "status": "For Sale",
+    "area": "2000 SqFt",
+    "location": {
+      "address": "120/A, R#33, Gulshan Ave, Dhaka.",
+      "postal_code": "1215",
+      "thana": "Gulshan",
+      "city": "Dhaka"
+    },
+    "facilities": ["living room", "kitchen", "backyard garden"],
+    "services": { "bed": 3, "bath": 2, "kitch": 1 }
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/nn42GH0/luxury-house.jpg",
+    "estate_title": "Modern Townhouse",
+    "segment_name": "Townhouses",
+    "short_des": "4 bed, 3 bath and 1 kitchen townhouse with rooftop terrace. Perfect for modern urban living.",
+    "description": "Welcome to urban luxury living at its finest. This modern townhouse offers a sophisticated blend of style, comfort, and convenience. Boasting four bedrooms and three bathrooms, the residence features a sleek and spacious design, ideal for contemporary living. The open-plan layout seamlessly connects the living, dining, and kitchen areas, creating an expansive space for relaxation and entertainment. Floor-to-ceiling windows flood the interiors with natural light, while high-end finishes and fixtures add a touch of elegance throughout. The gourmet kitchen is a chef's delight, complete with premium appliances, ample storage, and a large island for culinary endeavors and casual dining. Upstairs, the master suite is a private retreat, featuring a luxurious en-suite bathroom, walk-in closet, and access to a private balcony overlooking the city skyline. Outside, a rooftop terrace offers panoramic views and the perfect setting for alfresco dining or sunset cocktails with friends. With a two-car garage and additional storage space, this townhouse offers both style and practicality. Located in a vibrant neighborhood, residents enjoy easy access to shops, restaurants, parks, and cultural attractions. Whether you're exploring the city or relaxing at home, this modern townhouse offers the ultimate urban lifestyle experience.",
+    "price": "$9,500/month",
+    "status": "For Rent",
+    "area": "1800 SqFt",
+    "location": {
+      "address": "12/B, R#07, Agrabad, Chittagong.",
+      "postal_code": "1220",
+      "thana": "Agrabad",
+      "city": "Chittagong"
+    },
+    "facilities": ["living room", "rooftop terrace", "modern kitchen"],
+    "services": { "bed": 4, "bath": 3, "kitch": 1 }
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/QKQZbLt/appartments.jpg",
+    "estate_title": "Luxury Apartment",
+    "segment_name": "Apartments",
+    "short_des": "5 bed, 4 bath and 2 awesome kitchens apartment with panoramic city views. Luxury living at its finest.",
+    "description": "Indulge in luxurious urban living in this exquisite apartment. Situated in a prestigious building, this two-bedroom, two-bathroom residence offers a refined blend of style and sophistication.The spacious open-plan layout is bathed in natural light, creating a welcoming ambiance throughout. High ceilings, designer fixtures, and premium finishes elevate the interiors, while floor-to-ceiling windows frame panoramic city views. The gourmet kitchen is a culinary masterpiece, featuring sleek cabinetry, quartz countertops, and top-of-the-line appliances. A spacious master suite boasts a spa-like en-suite bathroom and a walk-in closet, providing a serene retreat from the hustle and bustle of city life.Residents enjoy access to a wealth of amenities, including a state-of-the-art fitness center, a resident lounge, and a landscaped rooftop terrace with sweeping city views. With 24-hour concierge service and secure underground parking, every convenience is at your fingertips. Located in the heart of the city, this luxury apartment offers unparalleled access to dining, shopping, entertainment, and cultural attractions. Whether you're exploring the vibrant neighborhood or relaxing at home, this is urban living at its finest.",
+    "price": "$1,050,000",
+    "status": "For Sale",
+    "area": "2200 SqFt",
+    "location": {
+      "address": "111/C, R#12, Banani, Dhaka.",
+      "postal_code": "1216",
+      "thana": "Banani",
+      "city": "Dhaka"
+    },
+    "facilities": ["living room", "fitness center", "concierge service"],
+    "services": { "bed": 5, "bath": 4, "kitch": 2 }
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/sRCdT8Q/student.jpg",
+    "estate_title": "Student Housing Complex",
+    "segment_name": "Student housing",
+    "short_des": "2 bed, 1 bath student housing with shared amenities. Ideal for academic success.",
+    "description": "Welcome to the ultimate student living experience. This purpose-built housing complex offers fully-furnished units designed with students in mind. Featuring private bedrooms, shared living spaces, and a range of amenities, this complex provides a supportive environment for academic success.Each unit is thoughtfully designed to maximize comfort and convenience, with modern furnishings, ample storage, and study areas. The shared living spaces foster a sense of community, allowing students to connect and collaborate with their peers.On-site amenities include a fitness center, a study lounge, and laundry facilities, providing everything students need for a balanced lifestyle. With 24-hour security and on-site management, residents can enjoy peace of mind knowing their needs are taken care of. Located near campus and within walking distance of shops, restaurants, and public transportation, this housing complex offers the perfect blend of convenience and connectivity. Whether you're hitting the books or exploring the city, this is student living at its best.",
+    "price": "$1,500/week",
+    "status": "For Rent",
+    "area": "800 SqFt",
+    "location": {
+      "address": "25/C, R#07, Mirpur 12, Dhaka.",
+      "postal_code": "1216",
+      "thana": "Mirpur",
+      "city": "Dhaka"
+    },
+    "facilities": ["study lounge", "gym", "laundry facilities"],
+    "services": { "bed": 2, "bath": 1, "kitch": 1 }
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/cyRhkN8/senior-living.jpg",
+    "estate_title": "Senior Living Community",
+    "segment_name": "Senior living communities",
+    "short_des": "2 bed, 2 bath senior living with resort-style amenities. Perfect for active retirees.",
+    "description": "Welcome to the pinnacle of senior living. This vibrant community offers resort-style amenities and a fulfilling lifestyle for active retirees. The spacious apartments are thoughtfully designed to accommodate the needs of seniors, with features such as step-free entryways, walk-in showers, and ample storage. Residents enjoy access to a wide range of amenities, including a swimming pool, a fitness center, and beautifully landscaped gardens. Regular social events and activities provide opportunities for residents to connect with neighbors and pursue their passions. With 24-hour security and on-site staff, residents can enjoy peace of mind knowing help is always available. Located in a desirable neighborhood, this community offers easy access to shops, restaurants, and cultural attractions, allowing residents to live life to the fullest. Whether you're enjoying a leisurely stroll through the gardens or participating in a fitness class, every day is an opportunity for adventure and enrichment.",
+    "price": "$1,050,500",
+    "status": "For Sale",
+    "area": "2500 SqFt",
+    "location": {
+      "address": "122/A, R#05, Shantigarh, Rajshahi.",
+      "postal_code": "5000",
+      "thana": "Shantigarh",
+      "city": "Rajshahi"
+    },
+    "facilities": ["swimming pool", "fitness center", "gardens"],
+    "services": { "bed": 4, "bath": 2, "kitch": 1 }
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/3RKwCWC/vacation.jpg",
+    "estate_title": "Scenic Vacation Rental",
+    "segment_name": "Vacation rentals",
+    "short_des": "3 bed, 2 bath vacation rental with serene nature views. Escape to tranquility.",
+    "description": "Escape to your own piece of paradise with this scenic vacation rental. Nestled amidst lush greenery and offering breathtaking nature views, this three-bedroom, two-bathroom retreat is the perfect destination for relaxation and rejuvenation. The spacious interiors are tastefully decorated and feature all the comforts of home, including a fully-equipped kitchen, a cozy living area, and comfortable bedrooms. Outside, a spacious deck provides the ideal setting for alfresco dining or simply soaking up the sun. Surrounded by nature trails and wildlife, this rental offers endless opportunities for outdoor adventure, from hiking and birdwatching to fishing and kayaking. Located just a short drive from the city, this vacation rental offers the perfect blend of tranquility and convenience. Whether you're seeking a peaceful retreat or a base for exploring the surrounding area, this property offers the perfect escape from the everyday hustle and bustle.",
+    "price": "$3,000/week",
+    "status": "For Rent",
+    "area": "1600 SqFt",
+    "location": {
+      "address": "131,R#20, Chuti Resort, Gazipur. ",
+      "postal_code": "2200",
+      "thana": "Bhawal",
+      "city": "Gazipur"
+    },
+    "facilities": ["scenic views", "spacious deck", "nature trails"],
+    "services": { "bed": 3, "bath": 2, "kitch": 1 }
+  }
+]

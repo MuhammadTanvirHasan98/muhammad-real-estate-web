@@ -14,7 +14,7 @@ const UpdateProfile = () => {
     const form = new FormData(e.currentTarget);
     console.log(form);
     const name = form.get("name");
-    const photo = form.get("photo");
+    var photo = form.get("photo");
     console.log(name, photo);
     // Disable edit mode after update
 
@@ -23,8 +23,10 @@ const UpdateProfile = () => {
     // const photo = e.target.photo.value;
     // console.log(name,photo)
     // Logic to update user profile
+    if(photo==null){
+        photo = "https://i.ibb.co/NThmbzT/Userprofile.png";
+    }
    
-    
     updateUserProfile(name, photo).then(() => {
       console.log("User Updated Successfully!");
       setLoading(false);
@@ -79,6 +81,7 @@ const UpdateProfile = () => {
                 placeholder="Enter your name"
                 className="input input-info"
                 disabled={!edit}
+                // value={user.displayName}
                 required
               />
             </div>
@@ -94,17 +97,12 @@ const UpdateProfile = () => {
                 placeholder="Enter photo URL"
                 className="input input-info"
                 disabled={!edit}
+                // value={user.photoURL}
               />
             </div>
 
             <div className="flex justify-between mt-6">
-              <button
-                onClick={handleEdit}
-                className="btn btn-sm md:btn-md lg:btn-md btn-primary"
-                 // Disable edit button when in edit mode
-              >
-                Edit
-              </button>
+             
 
               <button
                 type="submit"
@@ -115,7 +113,18 @@ const UpdateProfile = () => {
               </button>
             </div>
           </form>
-          <button className="btn btn-outline" onClick={tost}>Toast</button>
+          <div>
+          <button
+                onClick={handleEdit}
+                className="btn btn-sm md:btn-md lg:btn-md btn-primary absolute bottom-8 right-8"
+                 // Disable edit button when in edit mode
+              >
+                Edit
+              </button>
+
+          </div>
+        
+          {/* <button className="btn btn-outline" onClick={tost}>Toast</button> */}
         </div>
       </div>
       <ToastContainer />

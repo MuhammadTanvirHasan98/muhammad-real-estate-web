@@ -25,7 +25,7 @@ const ContactUs = () => {
       </div>
       <hr className="border-sky-600 border-dashed md:w-1/4 w-1/3 mx-auto mt-2" />
 
-      <div className="my-10">
+      <div className="my-10 w-[80%]  lg:w-[70%] mx-auto">
         <form onSubmit={handleFormSubmit}>
           <div className="flex flex-col md:flex-row  gap-3 justify-between mb-4 ">
             <div className="w-full md:w-1/2 space-y-4">
@@ -54,6 +54,7 @@ const ContactUs = () => {
                 type="number"
                 placeholder="Enter Your Number"
                 className="input input-bordered input-info w-full md:text-xl rounded-none text-sky-600"
+                required
               />
             </div>
           </div>

@@ -1,11 +1,13 @@
 import BestPlace from "./Sections/BestPlace";
+import Cards from "./Sections/Cards";
 import Slider from "./Sections/Slider";
 
 const Home = () => {
 
   return (
-    <div className="my-20 space-y-80">
+    <div className="space-y-16 md:space-y-32 lg:space-y-60">
        <Slider/>
+        <Cards/>
        <BestPlace/>
     </div>
   );

@@ -78,7 +78,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="">
+    <div className="relative z-10">
       <div className="navbar p-0 mt-2 lg:mt-4 border-2 border-blue-400 bg-gradient-to-r from-blue-400 to-white flex justify-between">
         <div className="navbar-start ">
           {/* Navbar left section */}

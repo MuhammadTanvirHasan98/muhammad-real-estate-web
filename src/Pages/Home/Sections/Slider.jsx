@@ -6,9 +6,9 @@ import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 
 const Slider = () => {
   return (
-    <div>
+    <div className="z-0">
 
-      <div className="mt-32 md:mt-0">
+      <div className="">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -23,7 +23,7 @@ const Slider = () => {
           navigation={true}
           modules={[Autoplay, EffectFade, Pagination, Navigation]}
           loop={true}
-          classNameName="mySwiper"
+          className="mySwiper"
         >
           <SwiperSlide>
             <div>
@@ -93,7 +93,7 @@ const Slider = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div>
-              <div className="lg:min-h-[700px] md:min-h-[500px] min-h-[350px] bg-[url('https://i.ibb.co/QKQZbLt/appartments.jpg')] bg-no-repeat bg-cover bg-center flex justify-center items-center md:mt-10 mt-4 py-8 md:py-0">
+              <div className="lg:min-h-[700px] md:min-h-[500px] min-h-[350px] bg-[url('https://i.ibb.co/nn42GH0/luxury-house.jpg')] bg-no-repeat bg-cover bg-center flex justify-center items-center md:mt-10 mt-4 py-8 md:py-0">
                 {/* Slider left Section */}
                 <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center md:gap-10 gap-4 p-2 ">
                   <div className="md:w-2/3 text-center md:text-left text-white">
