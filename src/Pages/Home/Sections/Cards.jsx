@@ -10,8 +10,6 @@ const Cards = () => {
       .then((data) => setCards(data));
   }, []);
 
-  console.log(cards);
-
   return (
     <div>
 

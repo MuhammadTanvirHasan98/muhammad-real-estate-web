@@ -15,8 +15,7 @@ const Navbar = () => {
         console.log(error.message);
       });
   };
-  console.log(user?.photoURL)
-
+ 
   const navLinks = (
     <div className="flex flex-col  lg:flex-row gap-2 ">
       <li>

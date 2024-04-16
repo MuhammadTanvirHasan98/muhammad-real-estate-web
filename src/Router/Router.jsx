@@ -9,6 +9,7 @@ import UserProfile from "../Pages/UserProfile/UserProfile";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import CardDetails from "../Pages/Home/Sections/Card/CardDetails";
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,12 @@ const router = createBrowserRouter([
         {
           path:"/login",
           element:<Login/>
+        },
+        {
+          path:"/estate/:id",
+          element:<CardDetails/>,
+          loader: ()=> fetch("estate.json")
+
         },
         {
           path:"/register",

@@ -6,8 +6,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Card = ({card}) => {
-  // const{bookId,bookName, author, image, tags, rating, category} = card;
-  // <Link to={`/book/${bookId}`}>
   const{id,image,segment_name,short_des,services,status,area,price, location} = card;
   console.log(image)
 

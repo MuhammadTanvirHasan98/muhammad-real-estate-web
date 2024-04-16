@@ -29,8 +29,8 @@ const UpdateProfile = () => {
    
     updateUserProfile(name, photo).then(() => {
       console.log("User Updated Successfully!");
+      toast.success("Updated Profile Successfully!",{position: "top-center"})
       setLoading(false);
-      // toast.success("Wow so easy !",{position: "top-center"})
     });
     
   };
