@@ -11,7 +11,7 @@ const Card = ({card}) => {
 
   return (
 
-    <div className="card rounded-none border-2  border-indigo-400 md:w-full shadow-xl">
+    <div data-aos="fade-up" className="card rounded-none border-2  border-indigo-400 md:w-full shadow-xl">
       {/* Card image */}
       <div className={`w-full xl:min-h-[380px] lg:min-h-[250px] md:min-h-[300px] min-h-[300px] bg-[url('${image}')] object-cover bg-no-repeat bg-cover bg-center flex flex-col justify-between`}>
         <div className="flex justify-between">
@@ -24,6 +24,7 @@ const Card = ({card}) => {
         </div>
 
         <div className="bg-indigo-100 text-indigo-600 p-3 font-bold flex justify-between text-sm hover:bg-indigo-600 hover:text-indigo-100">
+
           <div className="flex gap-4">
             <p className="flex items-center gap-1">
               <IoBedSharp />{services.bed}

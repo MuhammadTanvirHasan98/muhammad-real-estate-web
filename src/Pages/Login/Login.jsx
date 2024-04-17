@@ -4,6 +4,8 @@ import { UseAuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { FcGoogle } from "react-icons/fc";
 import { SiFacebook } from "react-icons/si";
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -40,13 +42,11 @@ const Login = () => {
         console.log("Logged in successfully!");
         toast.success(success);
         e.target.reset();
-        // navigate("/profile");
-        // ...
       })
       .catch((error) => {
         console.error(error.message);
         setErrorMsg(error.message);
-        toast.warn(errorMsg);
+        toast.warn(error.message);
       });
   };
 
@@ -73,7 +73,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log("This user is from Facebook", user);
-        // navigate("/profile");
+        toast.success("Logged in with facebook successfully!");
       })
       .catch((error) => {
         console.error(error.message);
@@ -90,17 +90,15 @@ const Login = () => {
 
   return (
     <div className={user ? "hidden":"block"}>
+      <Helmet>
+         <title>Mahammad Real Esate | Login</title>
+      </Helmet>
       <div className="hero-content mx-auto flex-col">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Welcome back!</h1>
-
-          {/*Just checking useContext works or not!  */}
-          {/* <div>
-         <h1>Your name:{name}</h1>
-         <p>Your age: {age}</p>
-      </div> */}
-          {/* Ends here! */}
         </div>
+
+        {/* Login section */}
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           {/* Login Form start from here */}
           <form onSubmit={handleLogin} className="card-body">

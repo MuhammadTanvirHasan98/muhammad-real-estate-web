@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FaTelegramPlane } from "react-icons/fa";
 
 const ContactUs = () => {
@@ -9,6 +10,9 @@ const ContactUs = () => {
 
   return (
     <div className="text-center text-3xl">
+      <Helmet>
+         <title>Mahammad Real Esate | Contact</title>
+      </Helmet>
       <div className="lg:min-h-[300px] md:min-h-[250px]  min-h-[150px]  bg-[url('https://i.ibb.co/0yxHpp9/contact-bg.png')] bg-no-repeat bg-cover object-fill bg-center flex justify-center items-center">
         <h1 className="lg:text-3xl md:text-2xl text-xl text-sky-600 bg-gray-300 md:p-4 p-2 font-bold">
           Contact Us Here

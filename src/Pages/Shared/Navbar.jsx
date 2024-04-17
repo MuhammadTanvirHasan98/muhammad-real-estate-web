@@ -22,8 +22,8 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "btn font-bold border-2 border-orange-600 text-orange-600"
-              : "font-bold btn"
+              ? "btn font-bold border-2 border-indigo-600 text-indigo-700"
+              : "font-bold btn text-sky-600"
           }
           to="/"
         >
@@ -35,8 +35,8 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "btn font-bold border-2 border-orange-600 text-orange-600"
-              : "font-bold btn"
+              ? "btn font-bold border-2 border-indigo-600 text-indigo-700"
+              : "font-bold btn text-sky-600"
           }
           to="/contact"
         >
@@ -48,8 +48,8 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "btn font-bold border-2 border-orange-600 text-orange-600"
-              : "font-bold btn"
+              ? "btn font-bold border-2 border-indigo-600 text-indigo-700"
+              : "font-bold btn text-sky-600"
           }
           to="/userProfile"
         >
@@ -63,8 +63,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "btn font-bold border-2 border-orange-600 text-orange-600"
-            : "font-bold btn"
+            ? "btn font-bold border-2 border-indigo-600 text-indigo-700"
+            : "font-bold btn text-sky-600"
         }
         to="/updateProfile"
       >
@@ -89,7 +89,7 @@ const Navbar = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 text-orange-500"
+                className="h-12 w-12 text-indigo-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -112,11 +112,11 @@ const Navbar = () => {
           </div>
           <Link to="/">
             <div className="flex items-center">
-              <HiHomeModern className="text-5xl text-orange-500 lg:text-7xl" />
-              <div className=" bg-gradient-to-r from-sky-300 to-purple-200 px-1  border-blue-500">
-                <h1 className="text-blue-800  lg:text-2xl text-sm font-bold">
+              <HiHomeModern className="text-5xl text-indigo-600 lg:text-7xl" />
+              <div className=" bg-gradient-to-r from-indigo-200  px-1 border-2 border-blue-500">
+                <h1 className="text-indigo-800  lg:text-2xl text-sm font-bold">
                   Muhammad <br />
-                  <span className="lg:text-xl text-orange-600 flex justify-center text-[12px]  tracking-wide">
+                  <span className="lg:text-xl text-indigo-600 flex justify-center text-[12px]  tracking-wide">
                     Real Estate
                   </span>
                 </h1>

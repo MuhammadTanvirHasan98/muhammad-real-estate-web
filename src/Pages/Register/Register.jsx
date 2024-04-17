@@ -3,6 +3,8 @@ import { useState } from "react";
 import { UseAuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { user, createUser, updateUserProfile } = UseAuthContext();
@@ -37,10 +39,12 @@ const Register = () => {
       setErrorMsg(
         "Password must contain at least one lowercase, one uppercase, one special character from [@#$%^&+=!] and 6 to 16 characters."
       );
+      toast.warn(" Password must contain at least one lowercase, one uppercase, one special character from [@#$%^&+=!] and 6 to 16 characters.")
       return;
     }
     if (!accepted) {
       setErrorMsg("Please accept our terms and condition.");
+      toast.warn("Please accept our terms and condition.");
       return;
     }
 
@@ -50,7 +54,7 @@ const Register = () => {
           const user = result.user;
           console.log(user);
           setSuccess("User created successfully.");
-          toast.success("Updated Profile Successfully!",{position: "top-center"})
+          toast.success("Updated Profile Successfully!")
           console.log("User Profile updated!");
           navigate("/");
         });
@@ -58,12 +62,17 @@ const Register = () => {
       .catch((error) => {
         console.error(error.message);
         setErrorMsg(error.message.slice(9, 50));
-        // ..
+        toast.warn(error.message.slice(9, 50));
       });
   };
 
   return (
     <div className={user ? "hidden" : "block"}>
+
+      <Helmet>
+         <title>Mahammad Real Esate | Register</title>
+      </Helmet>
+
       <div className="hero-content mx-auto flex-col">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Create New Account!</h1>

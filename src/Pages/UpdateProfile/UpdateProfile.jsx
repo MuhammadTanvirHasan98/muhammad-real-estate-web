@@ -1,5 +1,6 @@
 import { UseAuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -41,45 +42,49 @@ const UpdateProfile = () => {
 
   return (
     <div className="my-12">
+     <Helmet>
+         <title>Mahammad Real Esate | Update Profile</title>
+      </Helmet>
+
       <div className="w-full md:w-3/4 lg:w-1/2 mx-auto flex-col">
         <div className="text-center lg:text-left">
-          <h1 className="lg:text-4xl text-3xl text-center font-bold">
+          <h1 className="lg:text-4xl text-indigo-500 text-3xl text-center font-bold">
             Update Your Profile!
           </h1>
         </div>
 
         {/* Profile Info */}
-          <div className="card my-4 border-lime-500 border-2 w-full  bg-base-100 shadow-xl">
+          <div className=" my-4 border-indigo-500 border-2 w-full  bg-base-100 shadow-xl">
             <figure className=" w-1/2 mx-auto  my-4">
               <img
                 src={user?.photoURL}
                 alt="Shoes"
-                className="border-2 border-lime-700 rounded-full w-[200px] p-2 h-[200px] "
+                className="border-2 border-indigo-600 rounded-full w-[200px] mx-auto p-2 h-[200px] "
               />
             </figure>
-            <div className="p-4 items-center text-center">
-              <h2 className="lg:text-3xl text-2xl font-semibold">
-                Name: {user.displayName}
+            <div className="p-4 items-center text-center play">
+              <h2 className="lg:text-2xl text-xl font-semibold text-indigo-600">
+                Name: {user?.displayName}
               </h2>
-              <p className="lg:text-2xl text-xl font-semibold">Email: {user.email}</p>
-              <div className="card-actions flex flex-col items-center"></div>
+              <p className="lg:text-xl  text-wrap text-indigo-400">Email: {user?.email}</p>
+               <p className="text-gray-400 text-wrap ">PhotoURL: {user?.photoURL}</p>
             </div>
           </div>
           {/* Profile Info ends */}
      
 
         <div className="card shrink-0 w-full shadow-2xl bg-base-100">
-          <form onSubmit={handleUpdate} className="card-body">
+          <form onSubmit={handleUpdate} className="card-body ">
             {/* Update Name */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Update Name</span>
+                <span className="label-text text-indigo-500">Update Name</span>
               </label>
               <input
                 type="text"
                 name="name"
                 placeholder="Enter your name"
-                className="input input-info"
+                className="input input-info text-indigo-500"
                 disabled={!edit}
                 // value={user.displayName}
                 required
@@ -89,13 +94,13 @@ const UpdateProfile = () => {
             {/* Update Photo URL */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Update Photo URL</span>
+                <span className="label-text text-indigo-500">Update Photo URL</span>
               </label>
               <input
                 type="text"
                 name="photo"
                 placeholder="Enter photo URL"
-                className="input input-info"
+                className="input input-info text-indigo-500"
                 disabled={!edit}
                 // value={user.photoURL}
               />
@@ -124,7 +129,7 @@ const UpdateProfile = () => {
 
           </div>
         
-          {/* <button className="btn btn-outline" onClick={tost}>Toast</button> */}
+          <button className="btn btn-outline" onClick={tost}>Toast</button>
         </div>
       </div>
       <ToastContainer />

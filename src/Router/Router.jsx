@@ -32,7 +32,7 @@ const router = createBrowserRouter([
           element:<Login/>
         },
         {
-          path:"/estate/:id",
+          path:"/estate/:estateId",
           element:<CardDetails/>,
           loader: ()=> fetch("estate.json")
 
