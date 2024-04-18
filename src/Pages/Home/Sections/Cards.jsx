@@ -5,7 +5,7 @@ const Cards = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetch('estate.json')
+    fetch('/estate.json')
       .then((res) => res.json())
       .then((data) => setCards(data));
   }, []);
@@ -14,7 +14,7 @@ const Cards = () => {
     <div>
 
       {/* Header */}
-      <div className="text-center mb-10">
+      <div data-aos="fade-up" className="text-center mb-10">
         <p className="text-indigo-700 font-semibold lg:text-xl mb-4">
           Our Estates
         </p>
@@ -25,7 +25,7 @@ const Cards = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid lg:gap-8 gap-6  xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2">
+      <div className="grid lg:gap-8 gap-6  xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
       {
         cards.map((card,idx)=><Card
          key={idx}

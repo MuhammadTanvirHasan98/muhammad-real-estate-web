@@ -8,7 +8,7 @@ const Slider = () => {
   return (
     <div className="z-0">
 
-      <div className="">
+      <div data-aos="zoom-in">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -49,7 +49,7 @@ const Slider = () => {
                   {/* Slider right Section */}
                   <div className="md:w-1/3 w-full border-2  border-cyan-500 hover:border-orange-600 hover:bg-sky-500 hover:text-black py-2 flex flex-col items-center justify-center text-white animate__animated animate__backInRight  animate__delay-2s">
                     <h1 className="font-semibold md:text-xl">Sale Price</h1>
-                    <p className="font-bold md:text-3xl text-xl">$2,20,110/-</p>
+                    <p className="font-bold md:text-3xl text-xl">$1,050,000/-</p>
                     <button className="btn btn-sm md:btn-md bg-cyan-600 text-white font-bold rounded-none md:px-10 px-6 md:mt-6 mt-2 border-none hover:bg-orange-600 hover:text-black">
                       More Detail
                     </button>
@@ -82,7 +82,7 @@ const Slider = () => {
                   {/* Slider right Section */}
                   <div className="md:w-1/3 w-full border-2  border-cyan-500 hover:border-orange-600 hover:bg-sky-500 hover:text-black py-2 flex flex-col items-center justify-center text-white animate__animated animate__backInRight  animate__delay-2s">
                     <h1 className="font-semibold md:text-xl">Sale Price</h1>
-                    <p className="font-bold md:text-3xl text-xl">$2,20,110/-</p>
+                    <p className="font-bold md:text-3xl text-xl">$1,000,555/-</p>
                     <button className="btn btn-sm md:btn-md bg-cyan-600 text-white font-bold rounded-none md:px-10 px-6 md:mt-6 mt-2 border-none hover:bg-orange-600 hover:text-black">
                       More Detail
                     </button>
@@ -114,8 +114,8 @@ const Slider = () => {
 
                   {/* Slider right Section */}
                   <div className="md:w-1/3 w-full border-2  border-cyan-500 hover:border-orange-600 hover:bg-sky-500 hover:text-black py-2 flex flex-col items-center justify-center text-white animate__animated animate__backInRight  animate__delay-2s">
-                    <h1 className="font-semibold md:text-xl">Sale Price</h1>
-                    <p className="font-bold md:text-3xl text-xl">$2,20,110/-</p>
+                    <h1 className="font-semibold md:text-xl">Rent Price</h1>
+                    <p className="font-bold md:text-3xl text-xl">$9,500/<span className="md:text-xl text-lg">month</span></p>
                     <button className="btn btn-sm md:btn-md bg-cyan-600 text-white font-bold rounded-none md:px-10 px-6 md:mt-6 mt-2 border-none hover:bg-orange-600 hover:text-black">
                       More Detail
                     </button>

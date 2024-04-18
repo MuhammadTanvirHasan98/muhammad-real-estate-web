@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             <CardDetails/>
           </PrivateRoute>
         ),
-        loader: () => fetch("estate.json"),
+        loader: () => fetch("/estate.json"),
       },
       {
         path: "/register",

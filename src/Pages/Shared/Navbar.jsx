@@ -116,7 +116,7 @@ const Navbar = () => {
               <div className=" bg-gradient-to-r from-indigo-200  px-1 border-2 border-blue-500">
                 <h1 className="text-indigo-800  lg:text-2xl text-sm font-bold">
                   Muhammad <br />
-                  <span className="lg:text-xl text-indigo-600 flex justify-center text-[12px]  tracking-wide">
+                  <span className="lg:text-xl text-indigo-600 flex justify-center text-[12px]   md:tracking-extra-wide tracking-widest ">
                     Real Estate
                   </span>
                 </h1>
@@ -146,7 +146,7 @@ const Navbar = () => {
                 tabIndex={0}
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 right-0"
               >
-                <p className="text-center">{user?.displayName ? user?.displayName :"User Name"}</p>
+                <p className="text-center text-indigo-500 play font-bold">{user?.displayName ? user?.displayName :"User Name"}</p>
                 <Link className="flex mt-2 justify-center" to="/login">
               <button
                 onClick={handleLogOut}

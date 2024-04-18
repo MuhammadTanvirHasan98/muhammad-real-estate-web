@@ -2,14 +2,13 @@ import { createContext, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, GoogleAuthProvider,  FacebookAuthProvider } from "firebase/auth";
 import { auth } from "../Firebase/firebase.config";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 const AuthContext = createContext({});
 
+// Custom hook
 export const UseAuthContext =()=>{
     const authContext = useContext(AuthContext);
     return authContext; 
@@ -24,14 +23,14 @@ const FirebaseProvider = ({children}) => {
 
 
   //create user
-  const createUser = (email,password)=>{
+  const createUser = (email,password) =>{
        setLoading(true);
       return createUserWithEmailAndPassword(auth, email, password);
   }
 
 
-  //update user
-  const updateUserProfile =(name, photo)=>{
+  // update user //
+  const updateUserProfile = (name, photo) =>{
       setLoading(true);
      return updateProfile(auth.currentUser, {
       displayName: name, 
@@ -39,43 +38,42 @@ const FirebaseProvider = ({children}) => {
     });
   }
 
-  //sign in
-  const loginUser =(email,password)=>{
+  // user login in //
+  const loginUser = (email,password) =>{
       setLoading(true);
      return signInWithEmailAndPassword(auth, email, password);
   }
 
-  //google login
-  const loginWithGoogle =()=>{
+  //user google login //
+  const loginWithGoogle = () =>{
      setLoading(true);
      return signInWithPopup(auth, googleProvider);
   }
 
-  const loginWithFacebook =()=>{
+  //user facebook login //
+  const loginWithFacebook = () =>{
      setLoading(true);
      return signInWithPopup(auth, facebookProvider);
   }
 
-
-  const logOut=()=>{
+  // user log out //
+  const logOut = () =>{
      setLoading(true);
      return signOut(auth);
   }
 
-
+   // Observing user by onAuthStateChanged
   useEffect(()=>{
       const unsubscribe =  onAuthStateChanged(auth, (currentUser)=>{
          if(currentUser){
-          console.log("this user is observing by onAuthChangeState:", currentUser)
           setUser(currentUser);
           setLoading(false);
           console.log("Current user logged in!")
          }
          else{
            setUser(null);
-           console.log("Current user logged out!")
            setLoading(false);
-           console.log(user);
+           console.log("Current user logged out!")
          }
       })
 
@@ -91,14 +89,12 @@ const FirebaseProvider = ({children}) => {
    AOS.init({
      duration: 2000,
      once: true,
-     
    });
  }, []);
 
   useEffect(() => {
    if(!loading){
       AOS.refresh();
-      console.log("AOS is refreshed!")
    }
  }, [loading]);
 
@@ -122,7 +118,6 @@ const FirebaseProvider = ({children}) => {
       <AuthContext.Provider value={authInfo}>
          {children}
       </AuthContext.Provider>
-      <ToastContainer/>
     </div>
   );
 };

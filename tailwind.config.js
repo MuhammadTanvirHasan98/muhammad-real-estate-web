@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      letterSpacing: {
+        'extra-wide': '0.2em', // Adjust this value as needed
+      },
+    },
   },
   plugins: [require("daisyui")],
 }

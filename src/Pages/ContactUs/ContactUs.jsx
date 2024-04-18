@@ -13,23 +13,26 @@ const ContactUs = () => {
       <Helmet>
          <title>Mahammad Real Esate | Contact</title>
       </Helmet>
-      <div className="lg:min-h-[300px] md:min-h-[250px]  min-h-[150px]  bg-[url('https://i.ibb.co/0yxHpp9/contact-bg.png')] bg-no-repeat bg-cover object-fill bg-center flex justify-center items-center">
+      <div data-aos="fade-up" className="lg:min-h-[300px] md:min-h-[250px]  min-h-[150px]  bg-[url('https://i.ibb.co/0yxHpp9/contact-bg.png')] bg-no-repeat bg-cover object-fill bg-center flex justify-center items-center">
         <h1 className="lg:text-3xl md:text-2xl text-xl text-sky-600 bg-gray-300 md:p-4 p-2 font-bold">
           Contact Us Here
         </h1>
       </div>
-
-      <div className="mt-20 space-y-4">
-        <p className="md:text-[25px] text-sm font-semibold text-sky-600">
+      
+      <div data-aos="flip-up">
+      <div  className="mt-20 space-y-4">
+        <p className="md:text-[25px] text-sm font-semibold text-sky-700">
           Get it Touch
         </p>
-        <h1 className="lg:text-5xl md:text-4xl text-2xl  font-bold">
+        <h1 className="lg:text-5xl md:text-4xl text-2xl text-sky-500 font-bold">
           Contact Form
         </h1>
       </div>
-      <hr className="border-sky-600 border-dashed md:w-1/4 w-1/3 mx-auto mt-2" />
+      <hr className="border-sky-700 border-dashed md:w-1/4 w-1/3 mx-auto mt-2" />
+      </div>
+     
 
-      <div className="my-10 w-[80%]  lg:w-[70%] mx-auto">
+      <div  data-aos="flip-right" className="my-10 w-[80%]  lg:w-[70%] mx-auto">
         <form onSubmit={handleFormSubmit}>
           <div className="flex flex-col md:flex-row  gap-3 justify-between mb-4 ">
             <div className="w-full md:w-1/2 space-y-4">

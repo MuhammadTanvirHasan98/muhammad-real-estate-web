@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
 
-
   const { user } = UseAuthContext();
 
   return (
@@ -14,18 +13,18 @@ const UserProfile = () => {
       </Helmet>
       <h1 data-aos="zoom-in-down" data-aos-easing="ease-in-out" className="text-3xl mb-4 font-bold text-indigo-500">Your profile!</h1>
 
-      <div data-aos="flip-right" data-aos-duration="1000" className=" border-indigo-600 border-2 w-[90%] lg:w-[50%] bg-base-100 shadow-xl">
+      <div data-aos="flip-right" data-aos-duration="1000" className=" border-indigo-600 border-2 w-full lg:w-[50%] bg-base-100 shadow-xl">
         <figure data-aos="zoom-in" data-aos-easing="ease-in-out" className=" w-1/2 mx-auto   my-4">
           <img
-            src={user?.photoURL}
+            src={user?.photoURL!==null ?  user?.photoURL :"https://i.ibb.co/NThmbzT/Userprofile.png"}
             alt="Shoes"
-            className="border-2 border-indigo-600 rounded-full w-[200px] p-2 h-[200px] mx-auto"
+            className="border-2 border-indigo-600 rounded-full w-[150px] h-[150px] md:w-[200px] md:h-[200px] p-2  mx-auto"
           />
         </figure>
         <div data-aos="zoom-in-up" data-aos-easing="ease-in-out" className="p-4 items-center text-center ">
           <div className="play">
           <h2 className="lg:text-2xl font-semibold text-indigo-600">Name: {user?.displayName}</h2>
-          <p className="text-indigo-400">Email: {user?.email}</p>
+          <p className="text-indigo-500 ">Email: {user?.email}</p>
           </div>
          
 

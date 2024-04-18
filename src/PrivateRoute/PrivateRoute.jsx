@@ -1,7 +1,7 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { UseAuthContext } from "../FirebaseProvider/FirebaseProvider";
 import PropTypes from "prop-types";
-import { Puff } from "react-loader-spinner";
+import { BallTriangle} from "react-loader-spinner";
 
 const PrivateRoute = ({ children }) => {
   console.log("Private Route Called!");
@@ -10,18 +10,20 @@ const PrivateRoute = ({ children }) => {
   console.log(location);
   console.log(loading);
   if (loading) {
-    return <div className="min-h-[60vh] flex justify-center items-center">
-        <Puff
-          visible={true}
-          height="80"
-          width="80"
-          color="orange"
-          ariaLabel="puff-loading"
+    return (
+      <div className="min-h-[60vh] flex justify-center items-center">
+        <BallTriangle
+          height={100}
+          width={100}
+          radius={5}
+          color="blue"
+          ariaLabel="ball-triangle-loading"
           wrapperStyle={{}}
           wrapperClass=""
+          visible={true}
         />
       </div>
-    
+    );
   }
 
   if (user) {

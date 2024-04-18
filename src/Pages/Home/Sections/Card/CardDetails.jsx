@@ -3,21 +3,12 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { IoBedSharp } from "react-icons/io5";
 import { FaBath } from "react-icons/fa";
 import { MdSoupKitchen } from "react-icons/md";
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
-// import { useEffect } from "react";
 
 const CardDetails = () => {
   const data = useLoaderData();
   const { estateId } = useParams();
   const cardId = parseInt(estateId);
   const cardInfo = data.find((item) => item.id == cardId);
-  console.log(cardInfo);
-
-
-    // useEffect(()=>{
-    //   AOS.init();
-    // },[])
 
   const {
     id,
@@ -33,14 +24,14 @@ const CardDetails = () => {
   } = cardInfo;
 
   return (
-    <div className="mt-10 border-2 border-indigo-600 md:p-10 p-4">
+    <div  data-aos-duration="1000" className="mt-10 border-2 border-indigo-600 md:p-10 p-4">
       <Helmet>
          <title>
           {`Muhammad Real Estate | ${id}`} 
          </title>
        </Helmet>
       {/* Card Header */}
-      <div className="font-semibold flex flex-col md:flex-row justify-between border-2 mb-2 p-2 border-indigo-300 text-center md:text-left">
+      <div data-aos="flip-up"  className="font-semibold flex flex-col md:flex-row justify-between border-2 mb-2 p-2 border-indigo-300 text-center md:text-left">
         <p>
           Status:{" "}
           <span className="text-indigo-500 play font-bold">{status}</span>{" "}
@@ -58,12 +49,12 @@ const CardDetails = () => {
       <div className="">
         <div className="flex justify-between gap-4 font-semibold flex-col md:flex-row">
           {/* Card img */}
-          <div data-aos="fade-right" className="md:w-2/3 ]">
+          <div data-aos="zoom-in" className="md:w-2/3 ">
             <img src={image} alt="" />
           </div>
 
           {/* Cards Side Info */}
-          <div className="md:w-1/3 border-2 border-indigo-400 p-4 space-y-2 text-center md:text-left">
+          <div data-aos="flip-left" className="md:w-1/3 border-2 border-indigo-400 p-4 space-y-2 text-center md:text-left">
             <h1 className="font-semibold">Estate id: <span className="font-bold text-indigo-500">0{id}</span> </h1>
             <p className="font-semibold">
               Price:{" "}
@@ -106,7 +97,7 @@ const CardDetails = () => {
 
 
         {/* Services info */}
-        <div className="font-semibold text-indigo-500 md:w-[65%] mt-2 text-center md:text-left border-2 mx-auto border-indigo-400 p-2">
+        <div data-aos="flip-down"  className="font-semibold text-indigo-500 md:w-[65%] mt-2 text-center md:text-left border-2 mx-auto border-indigo-400 p-2">
            <p className="underline text-center">Premium Services</p>
 
            <div className=" flex md:flex-row flex-col md:gap-4 md:justify-between items-center">
@@ -132,11 +123,10 @@ const CardDetails = () => {
       {/* Card Middle Ends here */}
 
       {/* Card Footer */}
-      <div>
+      <div data-aos="fade-up">
         <p className="mt-4">
-          {" "}
           <span className="text-indigo-600 font-semibold play">
-            Descroption:{" "}
+            Description:
           </span>
           {description}
         </p>

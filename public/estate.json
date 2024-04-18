@@ -58,7 +58,7 @@
   },
   {
     "id": 4,
-    "image":"https://i.ibb.co/Jmx6bdG/single-house.jpg",
+    "image":"https://i.ibb.co/nn42GH0/luxury-house.jpg",
     "estate_title": "Student Housing Complex",
     "segment_name": "Student housing",
     "short_des": "2 bed, 1 bath student housing with shared amenities. Ideal for academic success.",
@@ -77,10 +77,10 @@
   },
   {
     "id": 5,
-    "image": "https://i.ibb.co/Jmx6bdG/single-house.jpg",
+    "image": "https://i.ibb.co/QKQZbLt/appartments.jpg",
     "estate_title": "Senior Living Community",
     "segment_name": "Senior living communities",
-    "short_des": "2 bed, 2 bath senior living with resort-style amenities. Perfect for active retirees.",
+    "short_des": "4 bed, 2 bath senior living with resort-style amenities. Perfect for active retirees.",
     "description": "Welcome to the pinnacle of senior living. This vibrant community offers resort-style amenities and a fulfilling lifestyle for active retirees. The spacious apartments are thoughtfully designed to accommodate the needs of seniors, with features such as step-free entryways, walk-in showers, and ample storage. Residents enjoy access to a wide range of amenities, including a swimming pool, a fitness center, and beautifully landscaped gardens. Regular social events and activities provide opportunities for residents to connect with neighbors and pursue their passions. With 24-hour security and on-site staff, residents can enjoy peace of mind knowing help is always available. Located in a desirable neighborhood, this community offers easy access to shops, restaurants, and cultural attractions, allowing residents to live life to the fullest. Whether you're enjoying a leisurely stroll through the gardens or participating in a fitness class, every day is an opportunity for adventure and enrichment.",
     "price": "$1,050,500",
     "status": "For Sale",
@@ -96,7 +96,7 @@
   },
   {
     "id": 6,
-    "image":"https://i.ibb.co/1Jr0TN7/senior-Living.jpg",
+    "image":"https://i.ibb.co/Jmx6bdG/single-house.jpg",
     "estate_title": "Scenic Vacation Rental",
     "segment_name": "Vacation rentals",
     "short_des": "3 bed, 2 bath vacation rental with serene nature views. Escape to tranquility.",
