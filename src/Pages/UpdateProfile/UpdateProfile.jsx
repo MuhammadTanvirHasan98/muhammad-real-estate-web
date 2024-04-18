@@ -1,14 +1,16 @@
 import { UseAuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateProfile = () => {
   const { user,setLoading, updateUserProfile } = UseAuthContext();
   const [edit, setEdit] = useState(false);
 
-  const tost =()=> toast.success("Wow so easy !",{position: "top-center"})
+  // const tost =()=> toast.success("Wow so easy !",{position: "top-center"})
+
+ 
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -17,20 +19,14 @@ const UpdateProfile = () => {
     const name = form.get("name");
     var photo = form.get("photo");
     console.log(name, photo);
-    // Disable edit mode after update
-
-    //Another way
-    // const name = e.target.name.value;
-    // const photo = e.target.photo.value;
-    // console.log(name,photo)
-    // Logic to update user profile
+  
     if(photo==null){
         photo = "https://i.ibb.co/NThmbzT/Userprofile.png";
     }
    
     updateUserProfile(name, photo).then(() => {
       console.log("User Updated Successfully!");
-      toast.success("Updated Profile Successfully!",{position: "top-center"})
+      // toast.success("Updated Profile Successfully!",{position: "top-center"})
       setLoading(false);
     });
     
@@ -41,20 +37,20 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="my-12">
+    <div className="my-12" >
      <Helmet>
          <title>Mahammad Real Esate | Update Profile</title>
       </Helmet>
 
-      <div className="w-full md:w-3/4 lg:w-1/2 mx-auto flex-col">
+      <div  className="w-full md:w-3/4 lg:w-1/2 mx-auto flex-col">
         <div className="text-center lg:text-left">
-          <h1 className="lg:text-4xl text-indigo-500 text-3xl text-center font-bold">
+          <h1 data-aos="flip-left" className="lg:text-4xl text-indigo-500 text-3xl text-center font-bold">
             Update Your Profile!
           </h1>
         </div>
 
         {/* Profile Info */}
-          <div className=" my-4 border-indigo-500 border-2 w-full  bg-base-100 shadow-xl">
+          <div data-aos="fade-right" className=" my-4 border-indigo-500 border-2 w-full  bg-base-100 shadow-xl">
             <figure className=" w-1/2 mx-auto  my-4">
               <img
                 src={user?.photoURL}
@@ -73,7 +69,8 @@ const UpdateProfile = () => {
           {/* Profile Info ends */}
      
 
-        <div className="card shrink-0 w-full shadow-2xl bg-base-100">
+       {/* Update Field */}
+        <div data-aos="fade-left" className="card shrink-0 w-full shadow-2xl bg-base-100 rounded-none">
           <form onSubmit={handleUpdate} className="card-body ">
             {/* Update Name */}
             <div className="form-control">
@@ -112,7 +109,7 @@ const UpdateProfile = () => {
               <button
                 type="submit"
                 className="btn md:btn-md lg:btn-md btn-sm btn-success text-white font-bold"
-                disabled={!edit} // Enable save button only in edit mode
+                disabled={!edit} 
               >
                 Save changes
               </button>
@@ -122,17 +119,16 @@ const UpdateProfile = () => {
           <button
                 onClick={handleEdit}
                 className="btn btn-sm md:btn-md lg:btn-md btn-primary absolute bottom-8 right-8"
-                 // Disable edit button when in edit mode
               >
                 Edit
               </button>
 
           </div>
         
-          <button className="btn btn-outline" onClick={tost}>Toast</button>
+          {/* <button className="btn btn-outline" onClick={tost}>Toast</button> */}
         </div>
       </div>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </div>
   );
 };

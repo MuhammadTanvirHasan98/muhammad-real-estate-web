@@ -6,17 +6,15 @@ import { SiFacebook } from "react-icons/si";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 
 const Login = () => {
-  // const {name, age} = UseAuthContext();
-  // const authInfo = UseAuthContext();
-  // console.log(authInfo);
-  // console.log("Login Component!");
-
-  const {user, loginUser, loginWithGoogle, loginWithFacebook } = UseAuthContext();
+ 
+  const { user, loginUser, loginWithGoogle, loginWithFacebook } = UseAuthContext();
   const [errorMsg, setErrorMsg] = useState("");
   const [success, setSuccess] = useState("");
+  const[showPass, setShowPass] = useState(false);
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
@@ -35,18 +33,14 @@ const Login = () => {
     //sign in with email and password
     loginUser(email, password)
       .then(() => {
-        // Logged in
-        // const user = result.user;
-        // console.log(user);
         setSuccess("User logged in successfully.");
         console.log("Logged in successfully!");
-        toast.success(success);
-        e.target.reset();
+        toast.success("Logged in successfully!");
       })
       .catch((error) => {
         console.error(error.message);
-        setErrorMsg(error.message);
-        toast.warn(error.message);
+        setErrorMsg(error.message.slice(9,50));
+        toast.warn(error.message.slice(9,50));
       });
   };
 
@@ -57,7 +51,7 @@ const Login = () => {
         const user = result.user;
         console.log("This user is from google", user);
         setSuccess("User logged in successfully.");
-        toast.success(success);
+        toast.success("Logged in with gmail  successfully.");
         // navigate("/profile");
       })
       .catch((error) => {
@@ -83,9 +77,14 @@ const Login = () => {
   };
 
   useEffect(()=>{
-     if(user){
-       navigate(location?.state || "/");
-     }
+
+    setTimeout(()=>{
+      if(user){
+        navigate(location?.state || "/");
+        console.log("UseEffect Call!")
+      }
+    },1000)
+    
   },[user])
 
   return (
@@ -115,18 +114,24 @@ const Login = () => {
                 required
               />
             </div>
-            <div className="form-control">
+
+
+            <div className="form-control mt-1">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
               {/* Password input */}
               <input
-                type="password"
+                type={showPass ? "text":"password"}
                 name="password"
                 placeholder="password"
                 className="input input-info"
                 required
               />
+              <span onClick={()=>setShowPass(!showPass)}
+              className="absolute text-sky-500 text-2xl right-12 top-44">
+               {showPass? <IoEyeOffOutline/>:<IoEyeOutline/>} 
+              </span>
               <label className="label">
                 <a
                   href="#"
@@ -137,7 +142,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary text-xl text-white">
                 Login
               </button>
             </div>
@@ -173,7 +178,17 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer 
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"/>
     </div>
   );
 };

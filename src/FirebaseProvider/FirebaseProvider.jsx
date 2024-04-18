@@ -2,8 +2,13 @@ import { createContext, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, GoogleAuthProvider,  FacebookAuthProvider } from "firebase/auth";
 import { auth } from "../Firebase/firebase.config";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const AuthContext = createContext(null);
+
+const AuthContext = createContext({});
 
 export const UseAuthContext =()=>{
     const authContext = useContext(AuthContext);
@@ -47,7 +52,7 @@ const FirebaseProvider = ({children}) => {
   }
 
   const loginWithFacebook =()=>{
-   //   setLoading(true);
+     setLoading(true);
      return signInWithPopup(auth, facebookProvider);
   }
 
@@ -65,13 +70,12 @@ const FirebaseProvider = ({children}) => {
           setUser(currentUser);
           setLoading(false);
           console.log("Current user logged in!")
-          
          }
          else{
            setUser(null);
            console.log("Current user logged out!")
            setLoading(false);
-         console.log(user);
+           console.log(user);
          }
       })
 
@@ -80,6 +84,23 @@ const FirebaseProvider = ({children}) => {
       }
 
   },[])
+
+
+//   AOS animation   //
+  useEffect(() => {
+   AOS.init({
+     duration: 2000,
+     once: true,
+     
+   });
+ }, []);
+
+  useEffect(() => {
+   if(!loading){
+      AOS.refresh();
+      console.log("AOS is refreshed!")
+   }
+ }, [loading]);
 
  
 
@@ -101,6 +122,7 @@ const FirebaseProvider = ({children}) => {
       <AuthContext.Provider value={authInfo}>
          {children}
       </AuthContext.Provider>
+      <ToastContainer/>
     </div>
   );
 };

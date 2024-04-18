@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 
 const Card = ({card}) => {
   const{id,image,segment_name,short_des,services,status,area,price, location} = card;
-  console.log(image)
+  // console.log(image)
 
   return (
 
-    <div data-aos="fade-up" className="card rounded-none border-2  border-indigo-400 md:w-full shadow-xl">
+    <div  className="card rounded-none border-2  border-indigo-400 md:w-full shadow-xl">
       {/* Card image */}
       <div className={`w-full xl:min-h-[380px] lg:min-h-[250px] md:min-h-[300px] min-h-[300px] bg-[url('${image}')] object-cover bg-no-repeat bg-cover bg-center flex flex-col justify-between`}>
         <div className="flex justify-between">

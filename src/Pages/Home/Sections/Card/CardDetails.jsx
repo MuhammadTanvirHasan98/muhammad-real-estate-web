@@ -1,8 +1,11 @@
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 import { IoBedSharp } from "react-icons/io5";
 import { FaBath } from "react-icons/fa";
 import { MdSoupKitchen } from "react-icons/md";
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
+// import { useEffect } from "react";
 
 const CardDetails = () => {
   const data = useLoaderData();
@@ -10,6 +13,11 @@ const CardDetails = () => {
   const cardId = parseInt(estateId);
   const cardInfo = data.find((item) => item.id == cardId);
   console.log(cardInfo);
+
+
+    // useEffect(()=>{
+    //   AOS.init();
+    // },[])
 
   const {
     id,
@@ -26,11 +34,11 @@ const CardDetails = () => {
 
   return (
     <div className="mt-10 border-2 border-indigo-600 md:p-10 p-4">
-      {/* <Helmet>
+      <Helmet>
          <title>
-           Muhammad Real Estate | {id}
+          {`Muhammad Real Estate | ${id}`} 
          </title>
-       </Helmet> */}
+       </Helmet>
       {/* Card Header */}
       <div className="font-semibold flex flex-col md:flex-row justify-between border-2 mb-2 p-2 border-indigo-300 text-center md:text-left">
         <p>

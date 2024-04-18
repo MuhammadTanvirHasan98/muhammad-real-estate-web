@@ -50,13 +50,23 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
+        toast.success("User created successfully!")
         updateUserProfile(name, photo).then(() => {
           const user = result.user;
           console.log(user);
           setSuccess("User created successfully.");
           toast.success("Updated Profile Successfully!")
           console.log("User Profile updated!");
-          navigate("/");
+          
+
+          setTimeout(() => {
+
+
+            navigate("/");
+
+            console.log("Navigate to home after 2 sec!");
+          }, 2000) 
+         
         });
       })
       .catch((error) => {
@@ -151,8 +161,8 @@ const Register = () => {
             {errorMsg && <p className="text-red-500">{errorMsg}</p>}
 
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-primary">
-                Login
+              <button type="submit" className="btn btn-primary text-xl text-white">
+                Register
               </button>
             </div>
           </form>

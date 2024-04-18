@@ -58,7 +58,7 @@
   },
   {
     "id": 4,
-    "image": "https://i.ibb.co/sRCdT8Q/student.jpg",
+    "image":"https://i.ibb.co/Jmx6bdG/single-house.jpg",
     "estate_title": "Student Housing Complex",
     "segment_name": "Student housing",
     "short_des": "2 bed, 1 bath student housing with shared amenities. Ideal for academic success.",
@@ -77,7 +77,7 @@
   },
   {
     "id": 5,
-    "image": "https://i.ibb.co/cyRhkN8/senior-living.jpg",
+    "image": "https://i.ibb.co/Jmx6bdG/single-house.jpg",
     "estate_title": "Senior Living Community",
     "segment_name": "Senior living communities",
     "short_des": "2 bed, 2 bath senior living with resort-style amenities. Perfect for active retirees.",
@@ -96,7 +96,7 @@
   },
   {
     "id": 6,
-    "image": "https://i.ibb.co/3RKwCWC/vacation.jpg",
+    "image":"https://i.ibb.co/1Jr0TN7/senior-Living.jpg",
     "estate_title": "Scenic Vacation Rental",
     "segment_name": "Vacation rentals",
     "short_des": "3 bed, 2 bath vacation rental with serene nature views. Escape to tranquility.",

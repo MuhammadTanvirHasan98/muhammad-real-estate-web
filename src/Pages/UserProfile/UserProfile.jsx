@@ -12,17 +12,17 @@ const UserProfile = () => {
       <Helmet>
          <title>Mahammad Real Esate | User Profile</title>
       </Helmet>
-      <h1 className="text-3xl mb-4 font-bold text-indigo-500">Your profile!</h1>
+      <h1 data-aos="zoom-in-down" data-aos-easing="ease-in-out" className="text-3xl mb-4 font-bold text-indigo-500">Your profile!</h1>
 
-      <div className=" border-indigo-600 border-2 w-[90%] lg:w-[50%] bg-base-100 shadow-xl">
-        <figure className=" w-1/2 mx-auto   my-4">
+      <div data-aos="flip-right" data-aos-duration="1000" className=" border-indigo-600 border-2 w-[90%] lg:w-[50%] bg-base-100 shadow-xl">
+        <figure data-aos="zoom-in" data-aos-easing="ease-in-out" className=" w-1/2 mx-auto   my-4">
           <img
             src={user?.photoURL}
             alt="Shoes"
             className="border-2 border-indigo-600 rounded-full w-[200px] p-2 h-[200px] mx-auto"
           />
         </figure>
-        <div className="p-4 items-center text-center ">
+        <div data-aos="zoom-in-up" data-aos-easing="ease-in-out" className="p-4 items-center text-center ">
           <div className="play">
           <h2 className="lg:text-2xl font-semibold text-indigo-600">Name: {user?.displayName}</h2>
           <p className="text-indigo-400">Email: {user?.email}</p>
