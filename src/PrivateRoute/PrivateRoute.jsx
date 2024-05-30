@@ -4,11 +4,9 @@ import PropTypes from "prop-types";
 import { BallTriangle} from "react-loader-spinner";
 
 const PrivateRoute = ({ children }) => {
-  console.log("Private Route Called!");
   const { user, loading } = UseAuthContext();
   const location = useLocation();
-  console.log(location);
-  console.log(loading);
+
   if (loading) {
     return (
       <div className="min-h-[60vh] flex justify-center items-center">

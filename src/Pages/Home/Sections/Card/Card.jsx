@@ -17,7 +17,7 @@ const Card = ({ card }) => {
     price,
     location,
   } = card;
-  // console.log(image)
+ 
 
   return (
     <div className="card rounded-none border-2  border-indigo-400 md:w-full shadow-xl">

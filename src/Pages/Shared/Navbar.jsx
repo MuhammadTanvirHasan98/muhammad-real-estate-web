@@ -116,7 +116,7 @@ const Navbar = () => {
               <div className=" bg-gradient-to-r from-indigo-200  px-1 border-2 border-blue-500">
                 <h1 className="text-indigo-800  lg:text-2xl text-sm font-bold">
                   Muhammad <br />
-                  <span className="lg:text-xl text-indigo-600 flex justify-center text-[12px]   md:tracking-extra-wide tracking-widest ">
+                  <span className="lg:text-xl text-indigo-600 flex justify-center text-[12px]   md:tracking-extra-wide tracking-widest bg-gradient-to-r from-primary via-blue-500 to-secondary bg-300% text-transparent bg-clip-text animate-gradient">
                     Real Estate
                   </span>
                 </h1>

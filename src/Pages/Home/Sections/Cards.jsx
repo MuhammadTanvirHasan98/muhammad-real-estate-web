@@ -25,7 +25,7 @@ const Cards = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid lg:gap-8 gap-6  xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
+      <div className="grid lg:gap-8 gap-6   lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
       {
         cards.map((card,idx)=><Card
          key={idx}

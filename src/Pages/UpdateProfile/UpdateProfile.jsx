@@ -18,7 +18,7 @@ const UpdateProfile = () => {
     const photo = form.get("photo");
   
     updateUserProfile(name, photo).then(() => {
-      console.log("User Updated Successfully!");
+  
       toast.success("Updated Profile Successfully!",{position: "top-center"})
       setLoading(false);
     });
@@ -56,11 +56,9 @@ const UpdateProfile = () => {
                 Name: {user?.displayName}
               </h2>
               <p className="lg:text-xl  text-wrap text-indigo-500">Email: {user?.email}</p>
-               <p className="text-indigo-400 text-wrap "> <span className="font-semibold">PhotoURL:</span>  {user?.photoURL}</p>
             </div>
           </div>
-          {/* Profile Info ends */}
-     
+          {/* Profile Info ends */}   
 
        {/* Update Field */}
         <div data-aos="fade-left" className="card shrink-0 w-full shadow-2xl bg-base-100 rounded-none">
