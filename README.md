@@ -1,25 +1,65 @@
 # Muhammad Real Estate
 
-[@Click here to visit my live website](http://localhost:5173/)
-
-Muhammad Real Estate is a premier residential real estate website offering a curated selection of properties for sale and rent. With a focus on user experience and convenience, our platform provides seamless access to property listings and essential features for both buyers and renters.
+[Muhammad Real Estate](https://muhammad-real-estate.netlify.app/updateProfile) is a premier residential real estate website offering a curated selection of properties for sale and rent. With a focus on user experience and convenience, our platform provides seamless access to property listings and essential features for both buyers and renters.
 
 ## Features:
 
-- **User Registration and Login:** Users can easily create accounts and login to access private routes and personalized services.
-- **Property Listings:** Users can browse through a diverse range of residential properties including single-family homes, townhouses, apartments, student housing, senior living communities, and vacation rentals etc. And users also can see details of any interested estate by signing up.
-- **Contact Form:** Connect with us effortlessly through our integrated contact form, allowing users to inquire about properties or seek assistance from our team.
-- **Responsive Design:** Our website is built with a responsive design, ensuring optimal viewing and interaction experience across a wide range of devices, from desktops to smartphones.
-- **Interactive Elements:** Enhance user engagement with dynamic features such as swiper sliders, animated transitions powered by animate.css, and smooth scrolling effects using AOS (Animate On Scroll) library.
-- **User-Friendly Interface:** Our website is designed with a user-centric approach, featuring intuitive navigation, clear layout, and streamlined functionalities for a seamless browsing experience.
+- **User Registration and Login:** Create accounts and access personalized services through private routes.
 
-## I used below listing npm package for the challenges task:
+- **Property Listings:** Browse a wide range of residential properties, including single-family homes, apartments, and more. Sign up for detailed property information.
 
-- **[Animate.css](https://animate.style/):** Animate.css is a popular CSS animation library that provides a collection of ready-to-use, cross-browser animations. It allows developers to easily add animations to their web projects without having to write the CSS animations from scratch.
+- **Contact Form:** Easily connect with our team using our integrated contact form for inquiries and assistance.
 
-- **[AOS Package](https://michalsnik.github.io/aos/):** AOS is a JavaScript library that allows you to animate elements on your website as they come into view when scrolling. This library is commonly used to create engaging and interactive scrolling effects that enhance the user experience.
+- **User Profile Management:** Update your name and photoURL for a personalized experience.
 
-- **[Swiper Slider](https://swiperjs.com/):** Swiper.js is a powerful and flexible JavaScript library for creating touch-enabled sliders, carousels, and swiper components on websites and web applications. It's commonly used for creating image sliders, product carousels, galleries, and other interactive content sliders.
 
+## Used these npm packages:
+
+- [Animate.css](https://animate.style/)
+- [AOS Package](https://michalsnik.github.io/aos/)
+- [Swiper Slider](https://swiperjs.com/)
+- [React-Helmet-Async](https://github.com/staylor/react-helmet-async)
+- [React-Hook-Form](https://react-hook-form.com/)
+- [React-Loader-Spinner](https://mhnpd.github.io/react-loader-spinner/)
+- [React-Toastify](https://fkhadra.github.io/react-toastify/)
+- [React-Router-Dom](https://reactrouter.com/web/guides/quick-start)
 
 Start your journey to finding your dream home or ideal rental property with **Muhammad Real Estate** today!
+
+### Getting Started
+
+#### Prerequisites
+Make sure you have the following installed on your system:
+- Node.js (v14.x or higher)
+- npm (v6.x or higher) or yarn (v1.x or higher)
+
+### Installation
+1.Clone the repository:
+```bash
+git clone https://github.com/MuhammadTanvirHasan98/muhammad-real-estate-web.git
+cd muhammad-real-estate-web
+```
+2.Installation:
+```bash
+npm install
+```
+3.Set up Firebase
+- Create a Firebase project: Visit [Firebase Console](https://console.firebase.google.com/)
+- Add a web app to generate Firebase configuration details.
+- Create a .env file in your project's root directory with the following Firebase configuration:
+```bash
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+4.Run the development server:
+```bash
+npm run dev
+```
+5.Build for production:
+```bash
+npm run build
+```
